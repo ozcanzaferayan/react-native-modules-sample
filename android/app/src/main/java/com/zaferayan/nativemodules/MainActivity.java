@@ -1,4 +1,4 @@
-package com.zaferayan.native_modules;
+package com.zaferayan.nativemodules;
 
 import android.os.Bundle;
 

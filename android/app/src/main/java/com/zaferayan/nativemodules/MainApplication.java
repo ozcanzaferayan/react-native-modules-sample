@@ -1,4 +1,4 @@
-package com.zaferayan.native_modules;
+package com.zaferayan.nativemodules;
 
 import android.app.Application;
 import android.content.Context;
@@ -11,7 +11,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.zaferayan.native_modules.generated.BasePackageList;
+import com.zaferayan.nativemodules.generated.BasePackageList;
+import com.zaferayan.nativemodules.mycustompackage.MyCustomPackage;
 
 import org.unimodules.adapters.react.ReactAdapterPackage;
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
@@ -43,6 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
+      packages.add(new MyCustomPackage());
       return packages;
     }
 
@@ -102,7 +104,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.zaferayan.native_modules.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.zaferayan.nativemodules.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

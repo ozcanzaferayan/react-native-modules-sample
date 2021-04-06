@@ -1,11 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, NativeModules, Platform, TouchableOpacity } from 'react-native';
 
 export default function App() {
+  const handleOpenNativeScreen = () => {
+    const os = Platform.OS;
+    const message = `Hello from ${os}`;
+    NativeModules.MyCustomModule.openNativeScreen(message);
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up asdasd.tsx to start working on your app!</Text>
+      <TouchableOpacity onPress={handleOpenNativeScreen} style={styles.button}>
+        <Text style={styles.buttonText}>Open native screen</Text>
+        </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +26,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button:{
+    borderRadius: 5,
+    backgroundColor: 'dodgerblue',
+    paddingVertical: 8,
+    paddingHorizontal: 12
+  }, 
+  buttonText :{
+    color:'white',
+    fontSize: 16
+  }
 });

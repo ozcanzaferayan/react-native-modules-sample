@@ -11,6 +11,9 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1528D6AE261D11CD006CAECB /* MyCustomModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1528D6AD261D11CD006CAECB /* MyCustomModule.m */; };
+		1528D6B3261D11ED006CAECB /* MyCustomModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528D6B2261D11ED006CAECB /* MyCustomModule.swift */; };
+		1528D6BB261D1F2B006CAECB /* NativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528D6BA261D1F2B006CAECB /* NativeViewController.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-NativeModules.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-NativeModules.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
@@ -18,13 +21,17 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* NativeModules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeModules.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* nativemodules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nativemodules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = NativeModules/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = NativeModules/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NativeModules/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NativeModules/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NativeModules/main.m; sourceTree = "<group>"; };
+		1528D6AD261D11CD006CAECB /* MyCustomModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCustomModule.m; sourceTree = "<group>"; };
+		1528D6B1261D11ED006CAECB /* NativeModules-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeModules-Bridging-Header.h"; sourceTree = "<group>"; };
+		1528D6B2261D11ED006CAECB /* MyCustomModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomModule.swift; sourceTree = "<group>"; };
+		1528D6BA261D1F2B006CAECB /* NativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeViewController.swift; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-NativeModules.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModules.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-NativeModules.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModules.debug.xcconfig"; path = "Target Support Files/Pods-NativeModules/Pods-NativeModules.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-NativeModules.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModules.release.xcconfig"; path = "Target Support Files/Pods-NativeModules/Pods-NativeModules.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +56,8 @@
 		13B07FAE1A68108700A75B9A /* NativeModules */ = {
 			isa = PBXGroup;
 			children = (
+				1528D6B9261D1F1A006CAECB /* ui */,
+				1528D6AB261D112F006CAECB /* MyCustomPackage */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -60,6 +69,24 @@
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
 			);
 			name = NativeModules;
+			sourceTree = "<group>";
+		};
+		1528D6AB261D112F006CAECB /* MyCustomPackage */ = {
+			isa = PBXGroup;
+			children = (
+				1528D6AD261D11CD006CAECB /* MyCustomModule.m */,
+				1528D6B2261D11ED006CAECB /* MyCustomModule.swift */,
+				1528D6B1261D11ED006CAECB /* NativeModules-Bridging-Header.h */,
+			);
+			path = MyCustomPackage;
+			sourceTree = "<group>";
+		};
+		1528D6B9261D1F1A006CAECB /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				1528D6BA261D1F2B006CAECB /* NativeViewController.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -96,7 +123,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* NativeModules.app */,
+				13B07F961A680F5B00A75B9A /* nativemodules.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,7 +167,7 @@
 			);
 			name = NativeModules;
 			productName = NativeModules;
-			productReference = 13B07F961A680F5B00A75B9A /* NativeModules.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* nativemodules.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +179,7 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -269,7 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1528D6BB261D1F2B006CAECB /* NativeViewController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				1528D6AE261D11CD006CAECB /* MyCustomModule.m in Sources */,
+				1528D6B3261D11ED006CAECB /* MyCustomModule.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -310,13 +341,13 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zaferayan.nativemodules";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zaferayan.nativemodules;
 				PRODUCT_NAME = nativemodules;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCustomPackage/NativeModules-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -326,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = NativeModules/Info.plist;
@@ -336,12 +368,12 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zaferayan.nativemodules";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zaferayan.nativemodules;
 				PRODUCT_NAME = nativemodules;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyCustomPackage/NativeModules-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -373,6 +405,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -402,7 +435,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 			};
 			name = Debug;
 		};
@@ -434,6 +466,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -456,7 +489,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				CODE_SIGN_ENTITLEMENTS = NativeModules/nativemodules.entitlements;
 			};
 			name = Release;
 		};
